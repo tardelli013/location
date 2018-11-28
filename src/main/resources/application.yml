@@ -1,0 +1,30 @@
+server:
+  servlet-path: /location
+
+management:
+  security:
+    enabled: false
+  context-path: /actuador
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+    default-property-inclusion: non_null
+
+maps:
+  googleapi:
+    url:
+      autocomplete: https://maps.googleapis.com/maps/api/place/autocomplete/json
+      detail: https://maps.googleapis.com/maps/api/place/details/json
+      photo: https://maps.googleapis.com/maps/api/place/photo
+      nearby_search: https://maps.googleapis.com/maps/api/place/nearbysearch/json
+      text_search: https://maps.googleapis.com/maps/api/place/textsearch/json
+    apikey:
+
+firebase:
+  security:
+    json:
